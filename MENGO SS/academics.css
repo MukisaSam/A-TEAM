@@ -18,8 +18,9 @@ padding:10px;
 text-align:center;
 }
 th{
-background-color:orange;
+background-color:maroon;
 font-weight:bold;
+    color:white;
 }
 tr:nth-child(even){
 background-color:lightgray;
