@@ -7,7 +7,8 @@ margin: auto;
 
 table{
 margin: auto;
-border-collapse:collapse;
+border-collapse:separate;
+border-radius:10px;
 padding: 10px;
 
 
@@ -20,7 +21,7 @@ text-align:center;
 th{
 background-color:maroon;
 font-weight:bold;
-    color:white;
+color:white;
 }
 tr:nth-child(even){
 background-color:lightgray;
@@ -34,9 +35,15 @@ text-align: center;
 p{
 color:maroon;
 text-align: center;
+border:2px solid black;
+border-radius:10px;
+width:max-content;
+margin:20px auto;
+background-color:#ddd;
+    
 }
 .accordion{
-width:90%;
+width:50%;
 
 margin:20px auto;
 }
@@ -45,7 +52,8 @@ border:1px solid #ddd;
 margin-bottom:5px;
 }
 .accordionitemheader{
-color:purple;
+background-color:maroon;
+color:white;
 }
 .accordionitembody{
 display:none;
@@ -61,7 +69,7 @@ right:1rem;
 }.accordionitemheader.active::after{
 content:"\2212";}
 .accordionitemheader.active{
-color:red;}
+color:orange;}
 
 .accordionitemheader.active + .accordionitembody{
 display:block;
