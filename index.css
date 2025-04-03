@@ -8,15 +8,6 @@ body {
     background-color: whitesmoke;
 }
 
-header {
-    background-color: maroon;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 40px 0px 40px 0px;
-    box-shadow: 10px 15px 20px grey;
-}
-
 .logo {
     float: none;
     max-width: 150px;
@@ -55,6 +46,7 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
+    text-align: center;
     transition: background 0.5s;
 }
 
@@ -64,6 +56,30 @@ nav a:hover {
     border-radius: 20px;
 }
 
+#links{
+    display: none;
+    position: absolute;
+    top: 415px;
+    right: 0;
+    z-index: 5;
+    height: 0;
+    overflow: auto;
+    animation: dropAnimation 0.5s ease-out;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
 .content {
     text-align: center;
     padding: 20px;
@@ -71,8 +87,8 @@ nav a:hover {
 
 .slideshow-container {
     position: relative;
-    box-shadow: 10px 20px 30px grey;
-    border-radius: 100px;
+    border-radius: 10px;
+    overflow: hidden;
     max-width: 100%;
     margin: 0cap;
 }
@@ -114,7 +130,7 @@ nav a:hover {
 }
 
 #maincontainer {
-    background-color: whitesmoke;
+    color: inherit;
     justify-content: center;
     margin-left: 30px;
     margin-right: 30px;
@@ -129,7 +145,6 @@ nav a:hover {
 
 #content {
     overflow: auto;
-    color: black;
     animation: slideIn 5s;
 }
 
@@ -145,16 +160,11 @@ p {
 }
 
 footer {
-    color: black;
-text-align: center;
-border-radius: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 /*dark mode*/
-.dark-mode {
-    background-color: grey;
-    color: black;
-}
 
 .dark-mode nav ul li a {
     color: white;
@@ -172,11 +182,92 @@ border-radius: 10px;
 }
 
 /* Responsive styles */
-@media (max-width: 600px) {
+@media (max-width: px) {
     nav ul {
         flex-direction: column;
     }
 }
+@media (max-width: 800px) {
+    /* Navbar Dropdown */
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        border-radius: initial !important;
+    }
+    .hide-nav{
+        display: none;
+    }
+    #maincontainer {
+        display: flex;
+        flex-direction: column;
+    }
+    #image {
+        width: 100%;
+        
+    }
+    #image img{
+        width: 100%;
+        border-radius: 10px;
+        
+    }
+    #content p{
+        margin: 0;
+        margin-top: 20px;
+    }
+    #headtr{
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    #links.show {
+        background-color: rgb(128, 0, 0);
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+    }  
+    .dark-mode .show{
+        background-color:#383636 !important;
+    }      
+
+    .hamburger {
+        display: flex;
+        padding: 10px;
+        margin-right: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    .hamburger:hover{
+        background-color: rgb(100, 0, 0);
+    }
+    
+
+    @keyframes dropAnimation {
+        from{
+            height: 0;
+        }
+        to{
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+@media (max-width: 320px) {
+    .gallery-grid {
+        display: block
+    }
+    .gallery-item {
+        margin-bottom: 10px;
+    }
+}
+
 /* General styles for the mode toggle button */
 .mode-toggle {
     background-color: maroon;
@@ -186,6 +277,9 @@ border-radius: 10px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+}
+.mode-toggle img{
+    width: 20px;
 }
 
 .mode-toggle:hover {
@@ -199,17 +293,19 @@ body.dark-mode {
 }
 
 body.dark-mode nav {
-    background-color: #1e1e1e;
+    background: none;
 }
 
 body.dark-mode a {
     color: #ffffff;
+    background: none;
 }
 
 body.dark-mode .mode-toggle {
     background-color: #ffffff;
     color: #121212;
 }
+
 header {
     position: relative; /* Allows positioning of child elements */
     background-color: maroon;
@@ -217,7 +313,7 @@ header {
     padding: 20px;
     text-align: center;
     border-radius: 40px 0px 40px 0px;
-    box-shadow: 10px 15px 20px grey;
+    box-shadow: 7px 8px 20px grey;
 }
 
 .mode-toggle {
@@ -229,7 +325,7 @@ header {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50%;
     font-size: 16px;
 }
 

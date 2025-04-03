@@ -18,55 +18,13 @@ function changeSlide(n) {
 }
 
  //Dark mode toggle
- document.addEventListener("DOMContentLoaded", function() {
- const darkModeToggle=document.getElementById("dark-mode-toggle");
- darkModeToggle.addEventListener("click", function() {
+ const darkModeToggle=document.getElementById("mode-toggle");
+ darkModeToggle.addEventListener("click", function() { 1
     document.body.classList.toggle("dark-mode");
  });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const modeToggle = document.getElementById('mode-toggle');
-    const body = document.body;
 
-    // Check for saved mode in localStorage
-    const savedMode = localStorage.getItem('theme');
-    if (savedMode === 'dark') {
-        body.classList.add('dark-mode');
-        modeToggle.textContent = 'Light Mode';
-    }
+ const navLinks = document.getElementById('links');
 
-    // Toggle dark and light mode
-    modeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            modeToggle.textContent = 'Light Mode';
-            localStorage.setItem('theme', 'dark'); // Save mode in localStorage
-        } else {
-            modeToggle.textContent = 'Dark Mode';
-            localStorage.setItem('theme', 'light'); // Save mode in localStorage
-        }
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const modeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-
-    // Check for saved mode in localStorage
-    const savedMode = localStorage.getItem('theme');
-    if (savedMode === 'dark') {
-        body.classList.add('dark-mode');
-        modeToggle.textContent = 'Light Mode';
-    }
-
-    // Toggle dark and light mode
-    modeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            modeToggle.textContent = 'Light Mode';
-            localStorage.setItem('theme', 'dark'); // Save mode in localStorage
-        } else {
-            modeToggle.textContent = 'Dark Mode';
-            localStorage.setItem('theme', 'light'); // Save mode in localStorage
-        }
-    });
-});
+function toggleMenu() {
+    navLinks.classList.toggle("show");
+}

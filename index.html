@@ -16,7 +16,7 @@
     <p class="motto">"AKWANA AKIRA AYOMBA"</p>
     <div>Literally means "make friends not foes"</div>
     <button id="mode-toggle" class="mode-toggle" aria-label="Toggle Dark Mode">
-        Light Mode
+        <img src="dark-mode-night-moon 2.svg" alt="dark-logo">
     </button>
 </header>
 
@@ -26,9 +26,21 @@
         <li><a href="About.html">About Us</a></li>
         <li><a href="academics.html">Academics</a></li>
         <li><a href="admissions.html">Admission</a></li>
-        <li><a href="news.html">News and Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
+        <li class="hide-nav"><a href="news.html">News and Events</a></li>
+        <li class="hide-nav"><a href="gallery.html">Gallery</a></li>
+        <li class="hide-nav"><a href="contactus.html">Contact Us</a></li>
+        <li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+        <div id="links">
+            <a href="news.html">News and Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
     </ul>
 </nav>
 
