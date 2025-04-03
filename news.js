@@ -1,5 +1,4 @@
 //calendar
-//calendar
 const calendarGrid = document.getElementById('calendar');
 const current = document.getElementById('currentDate');
 const eventBox = document.getElementById("events-box")
@@ -138,3 +137,10 @@ function todayDate() {
 document.addEventListener('DOMContentLoaded', function () {
     renderCalendar();
 });
+
+//responsive button
+const navLinks = document.getElementById('links');
+
+function toggleMenu() {
+    navLinks.classList.toggle("show");
+}

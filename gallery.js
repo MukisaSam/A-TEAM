@@ -25,3 +25,8 @@ lightbox.addEventListener('click', (e) => {
         lightbox.style.display = 'none';
     }
 }); 
+const navLinks = document.getElementById('links');
+
+function toggleMenu() {
+    navLinks.classList.toggle("show");
+}

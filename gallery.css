@@ -14,9 +14,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(128, 0, 0);
 }
-.navbar > :nth-child(2){
+#links{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,16 +25,15 @@ body{
 .navbar a{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: rgb(128, 0, 0) ;
-    font-size: 20px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-color: rgb(128, 0, 0);
+    font-size: 25px;
+    padding: 30px;
+    padding-right: 20px;
+
+    
 }
 .navbar a:hover {
-    background-color: rgb(100,0,0);
+    background-color: rgb(100, 0, 0);
 }
 .active{
     text-decoration: underline !important;
@@ -42,17 +42,31 @@ body{
     width: 60px;
     padding: 10px;
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
 /*Footer*/
 footer{
     width: 100%;
     height: 50px;
-    background-color: rgb(124, 12, 27);
+    background-color: rgb(128, 0, 0);
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     margin-top: 10px;
+    text-align: center;
 }
 .gallery-section {
     padding: 40px 20px;
@@ -132,4 +146,54 @@ footer{
     font-size: 18px;
     margin-top: 10px;
     text-align: center;
+}
+/*Responsive*/
+@media (max-width: 768px) {
+    /* Navbar Dropdown */
+    #links{
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        z-index: 5;
+        height: 0;
+        overflow: auto;
+        animation: dropAnimation 0.5s ease-out;
+    }
+
+    #links.show {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }        
+
+    .hamburger {
+        display: flex;
+        padding: 10px;
+        margin-right: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    .hamburger:hover{
+        background-color: rgb(100, 0, 0);
+    }
+    
+
+    @keyframes dropAnimation {
+        from{
+            height: 0;
+        }
+        to{
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .gallery-grid {
+        display: block
+    }
+    .gallery-item {
+        margin-bottom: 10px;
+    }
 }
