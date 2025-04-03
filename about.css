@@ -101,47 +101,27 @@ body {
     color: #0284c7;
   }
   
-  .testimonials {
-    margin-top: 40px;
+  .testimonial-container {
+    overflow: hidden; /* Hide overflowing content */
+    width: 100%;
+    position: relative;
   }
   
   .testimonial-grid {
-    display: flex;
+    display: flex; /* Arrange testimonials in a row */
     gap: 20px;
-    flex-wrap: wrap;
+    transition: transform 0.5s ease-in-out; /* Smooth scrolling effect */
   }
   
   .testimonial-grid blockquote {
-    flex: 1;
-    font-style: italic;
-    background: #f3f4f6;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  
-  .cta {
-    color: white;
+    min-width: 100%; /* Each testimonial takes up full width */
     text-align: center;
-    padding: 40px 20px;
-    background: maroon;
-    border-radius: 16px;
-    margin-top: 40px;
-  }
-  
-  .btn {
-    background-color: #0284c7;
-    color: white;
-    padding: 10px 16px;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 20px;
     border-radius: 8px;
-    text-decoration: none;
-    margin: 5px;
-    display: inline-block;
-  }
-  
-  .btn.outline {
-    background: transparent;
-    border: 2px solid #0284c7;
-    color: #0284c7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .team-grid {
     display: flex;

@@ -45,4 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
       updateCount();
     });
   });
-
+  document.addEventListener('DOMContentLoaded', () => {
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+    const testimonials = document.querySelectorAll('.testimonial-grid blockquote');
+    let currentIndex = 0;
+  
+    function scrollTestimonials() {
+      currentIndex++;
+      if (currentIndex >= testimonials.length) {
+        currentIndex = 0; // Reset to the first testimonial
+      }
+      const offset = -currentIndex * 100; // Calculate the offset for scrolling
+      testimonialGrid.style.transform = `translateX(${offset}%)`;
+    }
+  
+    // Auto-scroll every 3 seconds
+    setInterval(scrollTestimonials, 3000);
+  });
