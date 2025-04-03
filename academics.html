@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics</title>
     <link rel="icon" href="mengo.jpg" type="image/x-icon">
 <title>Academics Info</title>
 <link rel="stylesheet" href="academics.css">
@@ -11,7 +15,7 @@
         <div>
             <img src="mengo.jpg" alt="School-logo">
         </div>
-        <div>
+        <div id="links">
         <a href="index.html">Home</a>
         <a href="About.html">About Us</a>
         <a class="active" href="academics.html">Academics</a>
@@ -20,13 +24,116 @@
         <a href="gallery.html">Gallery</a>
         <a href="contactus.html">Contact Us</a>
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-<h1>
-ACADEMICS OF THE SCHOOL
-</h1>
-<p>MENGO SENIOR SCHOOL OFFERS A VARIETY OF SUBJECTS AT ADVANCED LEVEL GIVING OUR STUDENTS<br> MULTILE CAREER PATHS TO
- CHOOSE FROM TOGETHER WITH COMPETENT HEADS OF<br> DEPARTMENT WHO OFFER CAREER GUIDANCE BEFORE SELECTING A PARTICULAR SUBJECT </p>
-<table border="2">
+    <h1>Academics Of The School</h1>
+    <p>
+        Mengo Senior School offers a variety of subjects at advanced level giving our students<br> 
+        multile career paths to choose from together with competent heads of<br> 
+        department who offer career guidance before selecting a particular subject
+    </p>
+    <center>
+    <button class="accordion">List of Subjects</button>
+        <div class="panel">
+            <h2>General Paper</h2>
+            <p>A subject that covers a broad range of topics, often focusing on critical thinking, essay writing, and 
+                general knowledge. It's designed to enhance students' ability to express ideas and arguments 
+                effectively.
+            </p>
+            <h2>Subsidiary Math</h2>
+            <p>A basic math course that introduces students to fundamental concepts in algebra, geometry, and 
+                statistics. It is typically a lighter version of Mathematics.
+            </p>
+            <h2>Subsidiary ICT</h2>
+            <p>Focuses on the basics of Information and Communication Technology (ICT), including computer 
+                applications, internet usage, and basic programming concepts.
+            </p>
+            <h2>History</h2>
+            <p>The study of past events, civilizations, and societies, helping students understand historical 
+                developments and their impact on the present.
+            </p>
+            <h2>Economics</h2>
+            <p>
+                The study of the production, distribution, and consumption of goods and services. It focuses on 
+                understanding economic systems, policies, and financial markets.
+            </p>
+            <h2>Entrepreneurship</h2>
+            <p>
+                Teaches students how to create, develop, and manage businesses, covering topics like innovation, 
+                risk management, and business planning.
+            </p>
+            <h2>Christian Religious Education</h2>
+            <p>
+                Examines Christian beliefs, teachings, and the role of religion in society. It often includes 
+                Bible study, ethics, and religious history.
+            </p>
+            <h2>Geography</h2>
+            <p>
+                The study of the Earth’s physical features, climate, human activities, and their interaction. 
+                It also covers mapping, environmental issues, and geographic systems.
+            </p>
+            <h2>Literature in English</h2>
+            <p>
+                Analyzes English literary works, including novels, poetry, drama, and essays, focusing on themes, 
+                literary devices, and cultural contexts.
+            </p>
+            <h2>German</h2>
+            <p>
+                A language course that focuses on understanding and speaking German, including grammar, 
+                vocabulary, and cultural aspects of German-speaking countries.
+            </p>
+            <h2>Luganda</h2>
+            <p>
+                A course dedicated to the study of Luganda, a Bantu language spoken in Uganda, focusing on grammar, vocabulary, and literature in the language.
+            </p>
+            <h2>Mathematics</h2>
+            <p>
+                A comprehensive study of mathematical concepts such as algebra, calculus, statistics, and geometry, with an emphasis on problem-solving and logical reasoning.
+            </p>
+            <h2>Physics</h2>
+            <p>
+                The study of matter, energy, and the fundamental forces of nature. It includes topics like mechanics, electricity, magnetism, and thermodynamics.
+            </p>
+            <h2>Chemistry</h2>
+            <p>
+                Focuses on the composition, structure, and properties of matter. It includes studies in organic, inorganic, and physical chemistry, as well as laboratory experiments.
+            </p>
+            <h2>Biology</h2>
+            <p>
+                The study of living organisms, their structure, function, growth, and evolution. It also explores ecosystems, genetics, and human biology.
+            </p>
+            <h2>Art and Design</h2>
+            <p>
+                Encourages creativity through visual arts, including drawing, painting, sculpture, and digital design. It also involves understanding design principles and artistic techniques.
+            </p>
+            <h2>Music</h2>
+            <p>
+                A course that teaches the theory and practice of music, including musical notation, composition, performance, and the history of music.
+            </p>
+            <h2>Clothing and Textiles</h2>
+            <p>
+                Covers the production, design, and care of clothing and textiles. It includes practical skills such as sewing and understanding fabric properties.
+
+            </p>
+            <h2>Food and Nutrition</h2>
+            <p>
+                Focuses on the science of food, nutrition, and health. It includes topics like meal planning, food safety, and the relationship between diet and health.
+            </p>
+            <h2>Technical Drawing (Mechanical)</h2>
+            <p>
+                Teaches students to create detailed and accurate drawings of mechanical systems, often used in engineering and manufacturing.
+            </p>
+            <h2>Technical Drawing (Building)</h2>
+            <p>
+                Focuses on the creation of architectural and construction drawings, covering topics such as building plans, elevations, and structural details.
+            </p>
+        </div>
+    </center>
+        <table>
 <tr>
 <th>PAPER CODE</th>
 <th>SUBJECT NAME</th>
@@ -138,26 +245,12 @@ ACADEMICS OF THE SCHOOL
 <td>SONGHA RAMATHAN</td>
 </tr>
 </table>
-<p>HERE ARE SOME CAREERS AND THEIR RELEVANT SUBJECTS
-CLICK ON THE CAREER TO DISPLAY THE SUBJECTS<P>
-<div class="accordion">
-<div class="accordionitem active">
-<button class="accordionitemheader">MEDICAL DOCTOR</button>
-<div class="accordionitembody"><p>BIOLOGY AND CHEMISTRY</p></div></div>
-<div class="accordionitem">
-<button class="accordionitemheader">ENGINEER</button>
-<div class="accordionitembody"><p>PHYSICS AND MATH</p></div></div>
-<div class="accordionitem">
-<button class="accordionitemheader">PILOT</button>
-<div class="accordionitembody"><p>GEOGRAPHY AND MATH</p></div></div>
-<div class="accordionitem">
-<button class="accordionitemheader">ARCHITECTURE</button>
-<div class="accordionitembody"><p>ART AND TECHNICAL DRAWING</p></div></div>
-</div>
 
-<p>OUR SCHOOL IS ONE OF THE TOP PERFORMING SCHOOLS IN THE COUNTRY AND HERE ARE SOME YEARS 
-WHERE OUR<br> PERFORMANCE IN THE UGANDA ADVANCED CERTIFICATE OF EDUCATION WAS TOP NOTCH</p>
-    <table border="3">
+<p>Our school is one of the top performing schools in the country and here are some years 
+    where our<br> performance in the Uganda Advanced Certificate of Education was top notch
+</p>
+
+<table>
 <tr>
 <th>YEAR</th>
 <th>TWENTY POINTS</th>
@@ -179,23 +272,6 @@ WHERE OUR<br> PERFORMANCE IN THE UGANDA ADVANCED CERTIFICATE OF EDUCATION WAS TO
 <td>28</td>
 </tr>
 </table><br>
-
-<table id="dynamic-table" border="3">
-<thead>
-<tr>
-<th>YEAR</th>
-<th>TWENTY POINTS</th>
-<th>NINETEEN POINTS</th>
-<th>Action</th>
-</tr>
-</thead>
-
-<tbody>
-</tbody
-</table>
-<button id="add-row">
-    ADD ROW
-</button>
 
 <div id="footer">
     <footer>

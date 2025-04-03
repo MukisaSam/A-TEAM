@@ -1,4 +1,9 @@
-const topText = document.getElementById("top");
+const navLinks = document.getElementById('links');
+
+function toggleMenu() {
+    navLinks.classList.toggle("show");
+}
+    const topText = document.getElementById("top");
 const text = "Contact Us"; 
 let i = 0;
 

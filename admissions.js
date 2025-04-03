@@ -7,3 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Redirecting to the Contact Us page...');
     });
   });
+const navLinks = document.getElementById('links');
+
+function toggleMenu() {
+    navLinks.classList.toggle("show");
+}

@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -28,6 +28,23 @@ body {
 
 .navbar a.active {
   text-decoration: underline;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
 }
 
 .contactus {
@@ -109,3 +126,64 @@ input[type="text"], input[type="email"] {
   color: #800000; /* Maroon color */
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    /* Navbar Dropdown */
+    #links{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 5;
+        height: 0;
+        overflow: auto;
+        animation: dropAnimation 0.5s ease-out;
+    }
+    #links a{
+        background-color: rgb(128, 0, 0);
+    }
+
+    #links.show {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }        
+
+    .hamburger {
+        display: flex;
+        padding: 10px;
+        margin-right: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    .hamburger:hover{
+        background-color: rgb(100, 0, 0);
+    }
+    
+
+    @keyframes dropAnimation {
+        from{
+            height: 0;
+        }
+        to{
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+@media (max-width: 320px) {
+    .gallery-grid {
+        display: block
+    }
+    .gallery-item {
+        margin-bottom: 10px;
+    }
+}
+

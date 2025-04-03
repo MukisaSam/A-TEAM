@@ -220,7 +220,7 @@ body{
     text-align: center;
 }
 .navbar a:hover {
-    background-color: rgb(124, 12, 27);
+    background-color: rgb(100, 0, 0);
 }
 .active{
     text-decoration: underline !important;
