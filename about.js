@@ -62,3 +62,26 @@ document.addEventListener('DOMContentLoaded', function () {
     // Auto-scroll every 3 seconds
     setInterval(scrollTestimonials, 3000);
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    const modeToggle = document.getElementById('mode-toggle');
+    const body = document.body;
+  
+    // Check for saved mode in localStorage
+    const savedMode = localStorage.getItem('theme');
+    if (savedMode === 'dark') {
+      body.classList.add('dark-mode');
+      modeToggle.classList.add('dark-ring'); // Add the white ring in dark mode
+    }
+  
+    // Toggle dark and light mode
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        modeToggle.classList.add('dark-ring'); // Add the white ring
+        localStorage.setItem('theme', 'dark'); // Save mode in localStorage
+      } else {
+        modeToggle.classList.remove('dark-ring'); // Remove the white ring
+        localStorage.setItem('theme', 'light'); // Save mode in localStorage
+      }
+    });
+  });

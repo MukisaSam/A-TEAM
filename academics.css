@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 body{
-font-family:'Segoe UI', sans-serif;
-font-size:12px;
+    margin: 0px;
+    margin-top: 77px;
+    font-size: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: rgb(250, 250, 255);
 }
 
 table{
@@ -42,14 +46,6 @@ margin:20px auto;
     margin: auto;
     }
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-body{
-    margin: auto;
-    margin-top: 77px;
-    font-size: 18px;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: rgb(250, 250, 255);
-}
 .navbar{
     position: fixed;
     z-index: 2;
@@ -57,7 +53,6 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     background-color: rgb(128, 0, 0);
 }
@@ -70,8 +65,8 @@ body{
     color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(128, 0, 0) ;
-    font-size: 20px; 
-    padding: 30px;
+    font-size: 20px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,13 +75,6 @@ body{
 .navbar a:hover {
     background-color: rgb(100, 0, 0);
 }
-.active{
-    text-decoration: underline !important;
-}
-.navbar img{
-    width: 60px;
-    padding: 10px;
-}  
 .active{
     text-decoration: underline !important;
 }
@@ -233,4 +221,64 @@ body{
     .gallery-item {
         margin-bottom: 10px;
     }
+}
+/* General styles for the mode toggle button */
+.mode-toggle {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .mode-toggle img{
+    width: 20px;
+  }
+  
+  .mode-toggle:hover {
+    background-color: #a00000;
+  }
+  
+  /* Default light mode styles */
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .navbar {
+    background-color: maroon;
+    color: white;
+  }
+  
+  .navbar a {
+    color: white;
+  }
+  
+  .mode-toggle img {
+    width: 20px;
+    height: 20px;
+  }
+  
+ /* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .bc{
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar a {
+    color: #ffffff;
+}
+
+body.dark-mode .mode-toggle img {
+    filter: invert(1); /* Invert the icon color for better visibility */
 }

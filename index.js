@@ -28,3 +28,4 @@ function changeSlide(n) {
 function toggleMenu() {
     navLinks.classList.toggle("show");
 }
+

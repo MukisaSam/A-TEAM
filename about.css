@@ -1,13 +1,5 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9fafb;
-    color: #333;
-  }
-  
   .container {
     max-width: 1200px;
     margin: auto;
@@ -108,7 +100,7 @@ body {
   }
   
   .testimonial-grid {
-    display: flex; /* Arrange testimonials in a row */
+    display: flex; /* Arrange testimonial in a row */
     gap: 20px;
     transition: transform 0.5s ease-in-out; /* Smooth scrolling effect */
   }
@@ -230,4 +222,59 @@ body{
 
 footer {
   text-align: center;
+}
+/* General styles for the mode toggle button */
+.mode-toggle {
+  background-color: maroon;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.mode-toggle img{
+  width: 20px;
+}
+
+.mode-toggle:hover {
+  background-color: #a00000;
+}
+
+/* Default light mode styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar {
+  background-color: maroon;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+}
+
+.mode-toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar a {
+  color: #ffffff;
+}
+
+body.dark-mode .mode-toggle img {
+  filter: invert(1); /* Invert the icon color for better visibility */
 }
