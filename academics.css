@@ -260,25 +260,21 @@ margin:20px auto;
     height: 20px;
   }
   
- /* Dark mode styles */
-body.dark-mode {
+  /* Dark mode styles */
+  body.dark-mode .mode-toggle {
     background-color: #121212;
     color: #ffffff;
-}
-
-body.dark-mode .bc{
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode .navbar {
+  }
+  
+  body.dark-mode .navbar {
     background-color: #1e1e1e;
-}
-
-body.dark-mode .navbar a {
+  }
+  
+  body.dark-mode .navbar a {
     color: #ffffff;
-}
-
-body.dark-mode .mode-toggle img {
+  }
+  
+  body.dark-mode .mode-toggle img {
     filter: invert(1); /* Invert the icon color for better visibility */
-}
+  }
+  

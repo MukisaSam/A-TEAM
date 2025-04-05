@@ -3,9 +3,9 @@ const navLinks = document.getElementById('links');
 function toggleMenu() {
     navLinks.classList.toggle("show");
 }
-    var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("accordion");
 
-    //accordion
+//accordion
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       this.classList.toggle("activate");
@@ -16,7 +16,7 @@ for (let i = 0; i < acc.length; i++) {
         panel.style.maxHeight = panel.scrollHeight + "px";
       } 
     });
-  }
+}
 //tab
 for (let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', () => {
@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const modeToggle = document.getElementById('mode-toggle');
   const body = document.body;
 
+  if (!modeToggle) {
+    console.error('Mode toggle button not found');
+    return;
+  }
+
   // Check for saved mode in localStorage
   const savedMode = localStorage.getItem('theme');
   if (savedMode === 'dark') {
@@ -61,18 +66,4 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('theme', 'light'); // Save mode in localStorage
     }
   });
-
-  modeToggle.addEventListener('click', () => {
-    // Toggle the 'dark-mode' class on the body
-    document.body.classList.toggle('dark-mode');
-  });
-
-  modeToggle.addEventListener('click', () => {
-    console.log('Dark mode toggle clicked');
-    document.body.classList.toggle('dark-mode');
-  });
-});
-
-document.getElementById('mode-toggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
 });
